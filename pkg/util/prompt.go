@@ -21,13 +21,10 @@ func InputPrompt(label string) (input string, err error) {
 	return input, nil
 }
 
-func SelectGroupPrompt(cmdsMap CmdsMap, additionals ...string) (group string, err error) {
+func SelectGroupPrompt(cmdsMap CmdsMap) (group string, err error) {
 	groups := make([]string, 0, len(cmdsMap))
 	for g := range cmdsMap {
 		groups = append(groups, g)
-	}
-	if len(additionals) > 0 {
-		groups = append(groups, additionals...)
 	}
 
 	prompt := promptui.Select{
