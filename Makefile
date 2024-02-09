@@ -1,4 +1,4 @@
-.PHONY: clip edit exec read make_help
+.PHONY: clip edit exec read view make_help
 
 clip: ## Execute "go run main.go clip"
 	go run main.go clip -g $(g) -t $(t)
@@ -11,6 +11,9 @@ exec: ## Execute "go run main.go exec"
 
 read: ## Execute "go run main.go read"
 	go run main.go read -g $(g) -t $(t)
+
+view: ## Execute "go run main.go view"
+	go run main.go view
 
 make_help: ## Show Makefile options
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \

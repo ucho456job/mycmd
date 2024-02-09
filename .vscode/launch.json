@@ -44,6 +44,17 @@
       "args": [
         "read"
       ]
+    },
+    {
+      "name": "Launch with view",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/main.go",
+      "args": [
+        "view"
+      ]
     }
   ]
 }
