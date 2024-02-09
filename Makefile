@@ -1,4 +1,7 @@
-.PHONY: exec make_help
+.PHONY: edit exec make_help
+
+edit: ## Execute "go run main.go edit"
+	go run main.go edit -e $(e)
 
 exec: ## Execute "go run main.go exec"
 	go run main.go exec -g $(g) -t $(t)

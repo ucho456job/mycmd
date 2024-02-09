@@ -18,6 +18,7 @@ func main() {
 	flagSet := flag.NewFlagSet("mycmd", flag.ExitOnError)
 	groupFlag := flagSet.String("g", "", "Specify the group")
 	taskFlag := flagSet.String("t", "", "Specify the task")
+	editorFlag := flagSet.String("e", "", "Specify the editor")
 
 	if len(os.Args) < 2 {
 		err := fmt.Errorf("insufficient arguments: expected 1, but got %d", len(os.Args)-1)
@@ -29,6 +30,8 @@ func main() {
 	args := os.Args[2:]
 	flagSet.Parse(args)
 	switch arg {
+	case "edit":
+		cmd.Edit(*editorFlag)
 	case "exec":
 		cmd.Exec(*groupFlag, *taskFlag)
 	default:
