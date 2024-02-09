@@ -30,6 +30,8 @@ func main() {
 	args := os.Args[2:]
 	flagSet.Parse(args)
 	switch arg {
+	case "clip":
+		cmd.Clip(*groupFlag, *taskFlag)
 	case "edit":
 		cmd.Edit(*editorFlag)
 	case "exec":

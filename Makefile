@@ -1,4 +1,7 @@
-.PHONY: edit exec read make_help
+.PHONY: clip edit exec read make_help
+
+clip: ## Execute "go run main.go clip"
+	go run main.go clip -g $(g) -t $(t)
 
 edit: ## Execute "go run main.go edit"
 	go run main.go edit -e $(e)
