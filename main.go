@@ -36,6 +36,8 @@ func main() {
 		cmd.Edit(*editorFlag)
 	case "exec":
 		cmd.Exec(*groupFlag, *taskFlag)
+	case "help":
+		cmd.Help()
 	case "read":
 		cmd.Read(*groupFlag, *taskFlag)
 	case "view":

@@ -1,4 +1,4 @@
-.PHONY: clip edit exec read view make_help
+.PHONY: clip edit exec help read view make_help
 
 clip: ## Execute "go run main.go clip"
 	go run main.go clip -g $(g) -t $(t)
@@ -8,6 +8,9 @@ edit: ## Execute "go run main.go edit"
 
 exec: ## Execute "go run main.go exec"
 	go run main.go exec -g $(g) -t $(t)
+
+help: ## Execute "go run main.go help"
+	go run main.go help
 
 read: ## Execute "go run main.go read"
 	go run main.go read -g $(g) -t $(t)
