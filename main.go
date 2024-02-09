@@ -34,6 +34,8 @@ func main() {
 		cmd.Edit(*editorFlag)
 	case "exec":
 		cmd.Exec(*groupFlag, *taskFlag)
+	case "read":
+		cmd.Read(*groupFlag, *taskFlag)
 	default:
 		err := errors.New("unknown arg")
 		util.PrintErrMsg("failed to execute mycmd", err)

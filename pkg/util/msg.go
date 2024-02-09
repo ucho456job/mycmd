@@ -18,6 +18,10 @@ func RedFont(str string) string {
 	return "\033[31m" + str + "\033[0m"
 }
 
+func PrintSuccessMsg(msg string) {
+	fmt.Println(GreenFont(msg))
+}
+
 func PrintWarnMsg(msg string) {
 	fmt.Println(YellowFont(msg))
 }

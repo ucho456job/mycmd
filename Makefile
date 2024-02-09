@@ -1,10 +1,13 @@
-.PHONY: edit exec make_help
+.PHONY: edit exec read make_help
 
 edit: ## Execute "go run main.go edit"
 	go run main.go edit -e $(e)
 
 exec: ## Execute "go run main.go exec"
 	go run main.go exec -g $(g) -t $(t)
+
+read: ## Execute "go run main.go read"
+	go run main.go read -g $(g) -t $(t)
 
 make_help: ## Show Makefile options
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
