@@ -1,5 +1,5 @@
 # mycmd
-mycmd is a command-line tool that allows you to manage frequently used commands. It's sudden, but you love terminal software, don't you? You think you can't be apart from it for a moment, right? I understand that feeling very well. However, in reality, that is very difficult. This is because it is very hard to remember all the commands. It is very tedious to copy and execute many commands from Notepad. But rest assured. I developed this tool for people like you. Surely, your problem will be solved. Welcome to the world of dreams.
+mycmd is a tool for streamlining command line operations. This tool allows you to easily manage frequently used commands and quickly perform the tasks you need. By registering complex and long commands, you can automatically execute them simply by selecting them, or copy them to the clipboard for reuse. This makes tedious command line tasks easier and faster.
 
 ## Preparation
 
@@ -13,6 +13,7 @@ mycmd is a command-line tool that allows you to manage frequently used commands.
     # Mac
     curl -L -o ~/mycmd "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd_mac"
     ```
+    *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0]). Next, rename the downloaded binary her file to `mycmd`.
 
 2. Granting execution privileges
     ```sh
@@ -37,6 +38,7 @@ Before running the steps below, please open PowerShell with administrator privil
     ```powershell
     Invoke-WebRequest -Uri "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd-windows_amd64.exe" -OutFile "C:\Program Files\mycmd\mycmd.exe"
     ```
+    *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0]). Next, rename the downloaded exe file to `mycmd` and place it at `C:\Program Files\mycmd\mycmd.exe`.
 
 3. Add to PATH environment variable
     ```sh
