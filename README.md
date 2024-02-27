@@ -50,6 +50,12 @@ Before running the steps below, please open PowerShell with administrator privil
     [Environment]::SetEnvironmentVariable("Path", $env:Path, [EnvironmentVariableTarget]::Machine)
     ```
 
+## How to use
+
+1. Run `mycmd edit` to open $HOME/.mycmd/cmd.json
+2. Please update cmd.json referring to ["About cmd.json configuration structure"](#about-cmdjson-configuration-structure)
+3. You can run registered commands by running `mycmd exec` and following the prompts.
+
 ## Commands
 
 - `clip`: Copy commands to the clipboard. '-g' and '-t' options can be used.
@@ -64,12 +70,6 @@ Before running the steps below, please open PowerShell with administrator privil
 - `-g`: Specify group.
 - `-t`: Specify task.
 - `-e`: Specify editor. path must exist.
-
-## How to use
-
-1. Run `mycmd edit` to open $HOME/.mycmd/cmd.json
-2. Please update cmd.json referring to ["About cmd.json configuration structure"](#about-cmdjson-configuration-structure)
-3. You can run registered commands by running `mycmd exec` and following the prompts.
 
 ## About cmd.json configuration structure
 
@@ -152,6 +152,13 @@ pkg
 
 Completed step 1 command: ls -a
 ```
+
+## Important Note on Command Execution
+Note that this tool uses bash to run commands in non-Windows environments. This choice was made due to bash's wide adoption and compatibility with a variety of Linux distributions, including popular choices such as Ubuntu and Mac in WSL2 environments.
+
+If you are planning to run commands that are specific to bash or utilize features unique to bash, ensure that bash is available on your system. This is especially relevant for WSL2 users or those on Unix-like systems where bash is not the default shell.
+
+For Windows users, commands are executed using PowerShell. Ensure that your commands are compatible with the environment you're working in.
 
 ## Contribution
 
