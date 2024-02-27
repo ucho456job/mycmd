@@ -13,21 +13,23 @@ import (
 	"github.com/ucho456job/mycmd/pkg/util"
 )
 
-func Exec(group string, task string) {
+func Exec(group string, task string, force bool, arg string) {
 	cmds, err := util.PrepareCmds(&group, &task)
 	if err != nil {
 		util.PrintErrMsg("failed to prepare commands", err)
 		return
 	}
 
-	shouldProceed, err := util.ConfirmExecCmdsPrompt(cmds)
-	if err != nil {
-		util.PrintErrMsg("failed to confirm commands should be executed", err)
-		return
-	}
-	if !shouldProceed {
-		fmt.Println("Exited without executing any commands")
-		return
+	if !force {
+		shouldProceed, err := util.ConfirmExecCmdsPrompt(cmds)
+		if err != nil {
+			util.PrintErrMsg("failed to confirm commands should be executed", err)
+			return
+		}
+		if !shouldProceed {
+			fmt.Println("Exited without executing any commands")
+			return
+		}
 	}
 
 	currentDir, err := os.Getwd()
@@ -40,10 +42,12 @@ func Exec(group string, task string) {
 
 		// replace argument
 		if strings.Contains(cmd, "__arg__") {
-			arg, err := util.InputPrompt("Enter a value to replace __arg__")
-			if err != nil {
-				util.PrintErrMsg("failed to enter arg", err)
-				return
+			if arg == "" {
+				arg, err = util.InputPrompt("Enter a value to replace __arg__")
+				if err != nil {
+					util.PrintErrMsg("failed to enter arg", err)
+					return
+				}
 			}
 			cmd = strings.Replace(cmd, "__arg__", arg, -1)
 		}

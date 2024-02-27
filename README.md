@@ -60,7 +60,7 @@ Before running the steps below, please open PowerShell with administrator privil
 
 - `clip`: Copy commands to the clipboard. '-g' and '-t' options can be used.
 - `edit`: Edit cmd.json. '-e' option can be used.
-- `exec`: Execute commands. '-g' and '-t' options can be used.
+- `exec`: Execute commands. '-g', '-t', '-f' and '-a' options can be used.
 - `help`: Show help.
 - `read`: Show commands. '-g' and '-t' options can be used.
 - `view`: Show cmd.json.
@@ -69,6 +69,8 @@ Before running the steps below, please open PowerShell with administrator privil
 
 - `-g`: Specify group.
 - `-t`: Specify task.
+- `-f`: Run without confirmation.
+- `-a`: Specifies the argument to replace with `__arg__`.
 - `-e`: Specify editor. path must exist.
 
 ## About cmd.json configuration structure

@@ -14,7 +14,7 @@ func Help() {
 	msg += blue_("Commands:")
 	msg += white("  clip  Copy commands to the clipboard. '-g' and '-t' options can be used.")
 	msg += white("  edit  Edit cmd.json. '-e' option can be used.")
-	msg += white("  exec  Execute commands. '-g' and '-t' options can be used.")
+	msg += white("  exec  Execute commands. '-g', '-t', '-f' and '-a' options can be used.")
 	msg += white("  help  Show help.")
 	msg += white("  read  Show commands. '-g' and '-t' options can be used.")
 	msg += white("  view  Show cmd.json.")
@@ -22,6 +22,8 @@ func Help() {
 	msg += blue_("Options:")
 	msg += white("  -g  Specify group.")
 	msg += white("  -t  Specify task.")
+	msg += white("  -f  Run without confirmation.")
+	msg += white("  -a  Specifies the argument to replace with '__arg__'.")
 	msg += white("  -e  Specify editor. path must exist.")
 	msg += "\n"
 	msg += blue_("How to use:")

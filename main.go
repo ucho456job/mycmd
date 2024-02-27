@@ -18,6 +18,8 @@ func main() {
 	flagSet := flag.NewFlagSet("mycmd", flag.ExitOnError)
 	groupFlag := flagSet.String("g", "", "Specify the group")
 	taskFlag := flagSet.String("t", "", "Specify the task")
+	fourceFlag := flagSet.Bool("f", false, "Fource to execute")
+	argFlag := flagSet.String("a", "", "Specify the arg")
 	editorFlag := flagSet.String("e", "", "Specify the editor")
 
 	if len(os.Args) < 2 {
@@ -35,7 +37,7 @@ func main() {
 	case "edit":
 		cmd.Edit(*editorFlag)
 	case "exec":
-		cmd.Exec(*groupFlag, *taskFlag)
+		cmd.Exec(*groupFlag, *taskFlag, *fourceFlag, *argFlag)
 	case "help":
 		cmd.Help()
 	case "read":
