@@ -13,7 +13,7 @@ mycmd is a tool for streamlining command line operations. This tool allows you t
     # Mac
     curl -L -o ~/mycmd "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd_mac"
     ```
-    *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0]). Next, rename the downloaded binary her file to `mycmd`.
+    *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0). Next, rename the downloaded binary her file to `mycmd`.
 
 2. Granting execution privileges
     ```sh
@@ -38,7 +38,7 @@ Before running the steps below, please open PowerShell with administrator privil
     ```powershell
     Invoke-WebRequest -Uri "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd-windows_amd64.exe" -OutFile "C:\Program Files\mycmd\mycmd.exe"
     ```
-    *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0]). Next, rename the downloaded exe file to `mycmd` and place it at `C:\Program Files\mycmd\mycmd.exe`.
+    *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0). Next, rename the downloaded exe file to `mycmd` and place it at `C:\Program Files\mycmd\mycmd.exe`.
 
 3. Add to PATH environment variable
     ```sh
