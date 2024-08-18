@@ -38,17 +38,17 @@ func Help() {
 	msg += green("  Sample cmd.json:")
 	msg += "\n"
 	msg += `    {
-      "group1": {
-        "task1": [
+      "001_group1": {
+        "001_task1": [
           "command1",
           "command2"
         ],
-        "task2": [
+        "002_task2": [
           "command1"
         ]
       },
-      "group2": {
-        "task1": [
+      "002_group2": {
+        "001_task1": [
           "command1",
           "command2"
         ]

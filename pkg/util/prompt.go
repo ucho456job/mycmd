@@ -3,6 +3,7 @@ package util
 import (
 	"errors"
 	"fmt"
+	"sort"
 	"strings"
 
 	"github.com/manifoldco/promptui"
@@ -27,6 +28,8 @@ func SelectGroupPrompt(cmdsMap CmdsMap) (group string, err error) {
 		groups = append(groups, g)
 	}
 
+	sort.Strings(groups)
+
 	prompt := promptui.Select{
 		Label: BlueFont("Please select group"),
 		Items: groups,
@@ -45,6 +48,8 @@ func SelectTaskPrompt(groupMap GroupMap) (task string, err error) {
 	for task := range groupMap {
 		tasks = append(tasks, task)
 	}
+
+	sort.Strings(tasks)
 
 	prompt := promptui.Select{
 		Label: BlueFont("Please select task"),

@@ -25,10 +25,10 @@ func InitJson() {
 
 	if _, err := os.Stat(jsonFilePath); os.IsNotExist(err) {
 		initialData := map[string]interface{}{
-			"Linux": map[string][]string{
+			"001_Linux": map[string][]string{
 				"list": {"ls __arg__"},
 			},
-			"Windows": map[string][]string{
+			"002_Windows": map[string][]string{
 				"list": {"dir __arg__"},
 			},
 		}
