@@ -8,10 +8,10 @@ mycmd is a tool for streamlining command line operations. This tool allows you t
 1. Download
     ```sh
     # Linux
-    curl -L -o ~/mycmd "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd_linux"
+    curl -L -o ~/mycmd "https://github.com/ucho456job/mycmd/releases/download/v1.0.1/mycmd_linux"
 
     # Mac
-    curl -L -o ~/mycmd "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd_mac"
+    curl -L -o ~/mycmd "https://github.com/ucho456job/mycmd/releases/download/v1.0.1/mycmd_mac"
     ```
     *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0). Next, rename the downloaded binary her file to `mycmd`.
 
@@ -36,7 +36,7 @@ Before running the steps below, please open PowerShell with administrator privil
 
 2. Download
     ```powershell
-    Invoke-WebRequest -Uri "https://github.com/ucho456job/mycmd/releases/download/v1.0.0/mycmd-windows_amd64.exe" -OutFile "C:\Program Files\mycmd\mycmd.exe"
+    Invoke-WebRequest -Uri "https://github.com/ucho456job/mycmd/releases/download/v1.0.1/mycmd-windows_amd64.exe" -OutFile "C:\Program Files\mycmd\mycmd.exe"
     ```
     *If you are unable to download using commands due to security reasons, please download directly from [here](https://github.com/ucho456job/mycmd/releases/tag/v1.0.0). Next, rename the downloaded exe file to `mycmd` and place it at `C:\Program Files\mycmd\mycmd.exe`.
 
