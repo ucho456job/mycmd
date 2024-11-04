@@ -71,7 +71,11 @@ func Exec(group string, task string, force bool, arg string) {
 			if runtime.GOOS == "windows" {
 				execCmd = exec.Command("powershell.exe", "-Command", cmd)
 			} else {
-				execCmd = exec.Command("bash", "-c", cmd)
+				if shell := os.Getenv("SHELL"); strings.Contains(shell, "zsh") {
+					execCmd = exec.Command("zsh", "-c", cmd)
+				} else {
+					execCmd = exec.Command("bash", "-c", cmd)
+				}
 			}
 
 			// Fix execution directory
